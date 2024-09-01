@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class TinacoServiceImp implements TinacoService{
+public class TinacoServiceImp implements TinacoIService {
 
     @Autowired
     private TinacoRepo tinacoRepo;

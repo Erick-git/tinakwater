@@ -1,22 +1,23 @@
-package com.emartinez.CRUD.controller;
+package com.emartinez.CRUD.TinacoController;
 
 import com.emartinez.CRUD.model.Tinaco;
-import com.emartinez.CRUD.service.TinacoService;
-import org.hibernate.transform.AliasToBeanResultTransformer;
+
+import com.emartinez.CRUD.service.TinacoIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/measure-water-level")
 public class TinacoController {
 
     @Autowired
-    private TinacoService tinacoService;
+    private TinacoIService Service;
 
     @PostMapping("/tinaco")
     public Tinaco crearTinaco(@RequestBody Tinaco tinaco) {
+        TinacoIService tinacoService;
         return tinacoService.save(tinaco);
     }
 
